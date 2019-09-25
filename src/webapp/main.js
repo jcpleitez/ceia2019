@@ -12,7 +12,15 @@ function connect() {
     };
 
     ws.onmessage = function (evt) {
-        var json = JSON.parse(evt.data);        
+        var json = JSON.parse(evt.data);
+        if(typeof json.lumenes !== "undefined"){
+            let rgb = (255/4095)*json.lumenes;
+            document.body.style.backgroundColor = "rgba("+rgb+","+rgb+","+rgb+", 0.75)";
+            lumenes.innerText = json.lumenes+"lm";
+        }
+        if(typeof json.temperatura !== "undefined"){
+            temperatura.innerText = json.temperatura+"°C";
+        }
         console.log(json);
     };
 
