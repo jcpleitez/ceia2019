@@ -5,11 +5,32 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Ceia 2019</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/png" href="img/rocket-icon.png" />
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>    
 </head>
 <body>
 
-    <h1>Hello World</h1>
+    <div class='wrapper'>
+        <div class='widget' style='margin-right: 31px;'>
+            <i class='fa fa-4x fa-bolt icon'>                
+                <img src="img/temperature_icon.png" style="height: 20vh;" alt="Imagen Temperatura">
+            </i>
+            <div>
+                <div id="temperatura" class='degree'>0°C</div>
+                <div class='country'>Temperatura</div>
+            </div>
+        </div>
+        <div class='widget'>
+            <i class='fa fa-4x fa-sun-o icon' style='color: #82b2e4;'>
+                <img src="img/light-bulb.png" style="height: 20vh;" alt="Imagen Luz">
+            </i>
+            <div>
+                <div id="lumenes" class='degree'>0lm</div>
+                <div class='country'>Lumenes</div>
+            </div>
+        </div>
+    </div>
+      
     <script src='main.js'></script>
     
 </body>
